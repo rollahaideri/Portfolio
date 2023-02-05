@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMail, AiOutlineAppstoreAdd } from 'react-icons/ai';
+import {UilEstate, UilUserExclamation, UilFileAlt,UilSuitcaseAlt, UilScenery, UilMessage, UilTimesCircle} from '@iconscout/react-unicons';
 import { FaGithub, FaLinkedinIn, CgMouse } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+
 
 // import { useRouter } from 'next/router';
 import NavLogo from '../public/assets/navLogo.png'
@@ -13,6 +15,7 @@ const Navbar = () => {
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState('#ecf0f3');
   const [linkColor, setLinkColor] = useState('#1f2937');
+  
   // const [position, setPosition] = useState('fixed')
   // const router = useRouter();
 
@@ -33,6 +36,7 @@ const Navbar = () => {
 
   const handleNav = () => {
     setNav(!nav);
+    console.log("navebarclicked");
   };
 
   useEffect(() => {
@@ -46,15 +50,18 @@ const Navbar = () => {
     window.addEventListener('scroll', handleShadow);
   }, []);
 
+  
+
   return (
     <div
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
-          ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
-          : 'fixed w-full h-20 z-[100]'
+        ? 'invisible md:visible fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
+        : 'invisible md:visible fixed w-full h-20 z-[100] '
       }
     >
+    
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <Link href='/'>
           <a>
@@ -69,153 +76,93 @@ const Navbar = () => {
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
-            <li className='ml-10 text-sm hover:border-b'>
-              <Link href='/'>Home</Link>
+            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5] '>
+              <Link href='/' >Home</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b'>
+            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
               <Link href='/#about'>About</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b'>
+            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
               <Link href='/#skills'>Skills</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b'>
+            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
               <Link href='/#projects'>Projects</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b'>
+            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
               <Link href='/resume'>Resume</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b'>
+            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
               <Link href='/#contact'>Contact</Link>
             </li>
           </ul>
           {/* Hamburger Icon */}
-          <div
-            style={{ color: `${linkColor}` }}
+          {/* <div
+            style={{ color: `${linkColor}`}}
             onClick={handleNav}
-            className='md:hidden'
+            className='visible md:invisible fixed bottom-8 right-8 z-[110]'
           >
-            <AiOutlineMenu size={25} />
-          </div>
+            <AiOutlineAppstoreAdd size={25}/>
+          </div> */}
         </div>
       </div>
 
       {/* Mobile Menu */}
       {/* Overlay */}
+      <div className='justify-between items-center pt-8 px-16 pb-16 grid bottom-0 bg-white w-full h-2/6 rounded-t-2xl visible md:invisible fixed'>
+        <ul className='grid-cols-3 gap-x-14 gap-y-8 grid'>
+          <li>
+            
+            <a href="/#home" className=" flex flex-col items-center">
+            <UilEstate size="30" color="#5651e5" />Home
+            
+            </a>
+            
+          </li>
+          <li>
+            <a href="/#about" className=" flex flex-col items-center">
+            <UilUserExclamation size="30" color="#5651e5"/> About</a>
+          </li>
+          <li>
+            <a href="/#skills" className=" flex flex-col items-center">
+            <UilFileAlt size="30" color="#5651e5"/>  Skills</a>
+          </li>
+          
+          
+          <li>
+            <a href="/#projects" className=" flex flex-col items-center">
+              <UilSuitcaseAlt size="30" color="#5651e5"/>Projects</a>
+          </li>
+          <li>
+            <a href="/resume" className=" flex flex-col items-center">
+              <UilScenery size="30" color="#5651e5"/>Resume</a>
+          </li>
+          <li>
+            <a href="/#contact" className=" flex flex-col items-center">
+              <UilMessage size="30" color="#5651e5"/>Contact</a>
+          </li>
+
+          </ul>
       <div
+            style={{ color: `${linkColor}`, width: 10, height:10 }}
+            onClick={handleNav}
+            className='visible md:invisible fixed bottom-8 right-8'
+          >
+            <AiOutlineAppstoreAdd size={35}/>
+          </div>
+          <div className='absolute top-3 right-3' onClick={console.log("Close")}>
+            <UilTimesCircle color=""/>
+          </div>
+      {/* <div
         className={
-          nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
+          nav ? 
+          'md:hidden fixed left-0 top-0 w-full h-screen bg-black/60'
+           : ''
         }
       >
-        {/* Side Drawer Menu */}
-        <div
-          className={
-            nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
-              : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
-          }
-        >
-          <div>
-            <div className='flex w-full items-center justify-between'>
-              <Link href='/'>
-                <a>
-                  <Image
-                    src={NavLogo}
-                    width='87'
-                    height='35'
-                    alt='/'
-                  />
-                </a>
-              </Link>
-              <div
-                onClick={handleNav}
-                className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'
-              >
-                <AiOutlineClose />
-              </div>
-            </div>
-            <div className='border-b border-gray-300 my-4'>
-              <p className='w-[85%] md:w-[90%] py-4'>
-                Let&#39;s build something legendary together
-              </p>
-            </div>
-          </div>
-          <div className='py-4 flex flex-col'>
-            <ul className='uppercase'>
-              <Link href='/'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Home
-                </li>
-              </Link>
-              <Link href='/#about'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  About
-                </li>
-              </Link>
-              <Link href='/#skills'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Skills
-                </li>
-              </Link>
-              <Link href='/#projects'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Projects
-                </li>
-              </Link>
-              <Link href='/resume'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Resume
-                </li>
-              </Link>
-              <Link href='/#contact'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Contact
-                </li>
-              </Link>
-            </ul>
-            <div className='pt-40'>
-              <p className='uppercase tracking-widest text-[#5651e5]'>
-                Let&#39;s Connect
-              </p>
-              <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <a
-                  href='https://www.linkedin.com/in/clint-briley-50056920a/'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaLinkedinIn />
-                  </div>
-                </a>
-                <a
-                  href='https://github.com/fireclint'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaGithub />
-                  </div>
-                </a>
-                <Link href='/#contact'>
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
-                  >
-                    <AiOutlineMail />
-                  </div>
-                </Link>
-                <Link href='/resume'>
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
-                  >
-                    <BsFillPersonLinesFill />
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        
+        
+      </div> */}
+      </div> 
     </div>
   );
 };

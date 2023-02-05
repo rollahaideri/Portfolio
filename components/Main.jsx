@@ -19,7 +19,7 @@ const Main = () => {
           </h1>
           <h1 className='py-2 text-gray-700 '>An iOS/Android developer</h1>
           <p className='py-4 text-gray-600 sm:max-w-[70%] m-auto'>
-            I’m focused on building native & crossplotform applications for iOS/Android
+            I’m focused on building native & crossplatform applications for iOS/Android
             integrating back-end technologies.
           </p>
           <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
@@ -28,7 +28,7 @@ const Main = () => {
               target='_blank'
               rel='noreferrer'
             >
-              <div className=' rounded-full p-6 cursor-pointer hover:scale-110 ease-in duration-600 '>
+              <div className= 'p-6 cursor-pointer hover:scale-110  transition-all ease-in-out transform-origin center'>
                 <FaLinkedinIn className='w-12 h-11 text-[#5651e5]'/>
               </div>
             </a>
@@ -37,27 +37,27 @@ const Main = () => {
               target='_blank'
               rel='noreferrer'
             >
-              <div className=' p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+              <div className=' p-6 cursor-pointer hover:scale-110  transition-all ease-in-out transform-origin center'>
                 <FaGithub className='w-12 h-11 text-[#5651e5]'/>
               </div>
             </a>
             <Link href='/#contact'>
-              <div className='p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+              <div className='p-6 cursor-pointer hover:scale-110  transition-all ease-in-out transform-origin center'>
                 <AiOutlineMail className='w-12 h-11 text-[#5651e5]'/>
               </div>
             </Link>
             <Link href='/resume'>
-              <div className=' p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+              <div className='p-6 cursor-pointer hover:scale-110  transition-all ease-in-out transform-origin center'>
                 <BsFillPersonLinesFill className='w-12 h-11 text-[#5651e5]'/>
               </div>
             </Link>
             
           </div>
           <Link href='/#about'>
-              <div className='cursor-pointer flex items-center justify-between max-w-[220px] py-6 px-5 relative left-9 bottom-14 top-14'>
+              <div className=' cursor-pointer flex items-center justify-between max-w-[220px] py-6 px-5 relative left-9 bottom-14 top-14 hover:translate-y-3 transition-all duration-300 ease-in-out'>
                 <CgMouse className='w-12 h-11 text-[#5651e5]'/>
                 <a>Scroll down</a>
-                <FiArrowDown className='w-5 h-5 text-[#5651e5]'/>
+                <FiArrowDown className='w-5 h-5 text-[#5651e5] animate-bounce hover:pointer-events-none'/>
               </div>
             </Link>
         </div>
