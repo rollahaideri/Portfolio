@@ -15,10 +15,7 @@ export default function Home() {
           content="I’m a iOS/Android developer specializing in building (and occasionally designing) exceptional digital experiences."
         />
         <link rel="icon" href="/fav.png" />
-        <link
-          rel="stylesheet"
-          href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css"
-        ></link>
+        
       </Head>
       <Main />
       <About />
