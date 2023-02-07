@@ -112,33 +112,33 @@ const Navbar = () => {
         <ul className='grid-cols-3 gap-x-14 gap-y-8 grid'>
           <li>
             
-            <a href="/#home" className=" flex flex-col items-center">
+            <Link href="/#home" className=" flex flex-col items-center">
             <UilEstate size="30" color="#5651e5" />Home
             
-            </a>
+            </Link>
             
           </li>
           <li>
-            <a href="/#about" className=" flex flex-col items-center">
-            <UilUserExclamation size="30" color="#5651e5"/> About</a>
+            <Link href="/#about" className=" flex flex-col items-center">
+            <UilUserExclamation size="30" color="#5651e5"/> About</Link>
           </li>
           <li>
-            <a href="/#skills" className=" flex flex-col items-center">
-            <UilFileAlt size="30" color="#5651e5"/>  Skills</a>
+            <Link href="/#skills" className=" flex flex-col items-center">
+            <UilFileAlt size="30" color="#5651e5"/>  Skills</Link>
           </li>
           
           
           <li>
-            <a href="/#projects" className=" flex flex-col items-center">
-              <UilSuitcaseAlt size="30" color="#5651e5"/>Projects</a>
+            <Link href="/#projects" className=" flex flex-col items-center">
+              <UilSuitcaseAlt size="30" color="#5651e5"/>Projects</Link>
           </li>
           <li>
-            <a href="/resume" className=" flex flex-col items-center">
-              <UilScenery size="30" color="#5651e5"/>Resume</a>
+            <Link href="/resume" className=" flex flex-col items-center">
+              <UilScenery size="30" color="#5651e5"/>Resume</Link>
           </li>
           <li>
-            <a href="/#contact" className=" flex flex-col items-center">
-              <UilMessage size="30" color="#5651e5"/>Contact</a>
+            <Link href="/#contact" className=" flex flex-col items-center">
+              <UilMessage size="30" color="#5651e5"/>Contact</Link>
           </li>
 
           </ul>
