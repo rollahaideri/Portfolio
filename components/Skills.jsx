@@ -9,7 +9,7 @@ import Github from '../public/assets/skills/github1.png';
 import Firebase from '../public/assets/skills/firebase.png';
 import NextJS from '../public/assets/skills/nextjs.png'
 import SWIFT from '../public/assets/skills/swift.png';
-import Kotlin from '../public/assets/skills/kotlin.png';
+import Kotlin from '../public/assets/skills/Kotlin.png';
 import MongoDB from '../public/assets/skills/MongoDB.png';
 
 import AWS from '../public/assets/skills/aws.png';
