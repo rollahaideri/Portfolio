@@ -113,32 +113,38 @@ const Navbar = () => {
           <li>
             
             <Link href="/#home" className=" flex flex-col items-center">
-            <UilEstate size="30" color="#5651e5" />Home
-            
+              <div>
+            <UilEstate size="30" color="#5651e5" > </UilEstate>Home
+            </div>
             </Link>
             
           </li>
           <li>
             <Link href="/#about" className=" flex flex-col items-center">
-            <UilUserExclamation size="30" color="#5651e5"/> About</Link>
+              <div>
+            <UilUserExclamation size="30" color="#5651e5"/> About </div></Link>
           </li>
           <li>
             <Link href="/#skills" className=" flex flex-col items-center">
-            <UilFileAlt size="30" color="#5651e5"/>  Skills</Link>
+              <div>
+            <UilFileAlt size="30" color="#5651e5"/>  Skills </div></Link>
           </li>
           
           
           <li>
             <Link href="/#projects" className=" flex flex-col items-center">
-              <UilSuitcaseAlt size="30" color="#5651e5"/>Projects</Link>
+              <div>              <UilSuitcaseAlt size="30" color="#5651e5"/>Projects </div>
+</Link>
           </li>
           <li>
             <Link href="/resume" className=" flex flex-col items-center">
-              <UilScenery size="30" color="#5651e5"/>Resume</Link>
+              <div>
+              <UilScenery size="30" color="#5651e5"/>Resume </div></Link>
           </li>
           <li>
             <Link href="/#contact" className=" flex flex-col items-center">
-              <UilMessage size="30" color="#5651e5"/>Contact</Link>
+              <div>
+              <UilMessage size="30" color="#5651e5"/>Contact </div></Link>
           </li>
 
           </ul>
