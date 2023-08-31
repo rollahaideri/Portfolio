@@ -13,7 +13,7 @@ import NavLogo from '../public/assets/navLogo.png'
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState('#ecf0f3');
+  const [navBg, setNavBg] = useState('rgba(248, 248, 251, 0.5)');
   const [linkColor, setLinkColor] = useState('#1f2937');
   
   // const [position, setPosition] = useState('fixed')
@@ -43,8 +43,10 @@ const Navbar = () => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
         setShadow(true);
+        // setNavBg('rgba(248, 248, 251, 0.5)');
       } else {
         setShadow(false);
+        // setNavBg('rgba(248, 248, 251, 1.0)');
       }
     };
     window.addEventListener('scroll', handleShadow);
@@ -57,13 +59,13 @@ const Navbar = () => {
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
-        ? 'invisible md:visible fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
-        : 'invisible md:visible fixed w-full h-20 z-[100] '
+        ? 'invisible md:visible fixed w-full h-12 backdrop-blur-xl bg-white/30 shadow-sm z-[100] ease-in-out duration-300'
+        : 'invisible md:visible fixed w-full h-12 z-[100] shadow-sm '
       }
     >
     
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-        <Link href='/'>
+      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-12'>
+        {/* <Link href='/'>
           <a>
             <Image
               src={NavLogo}
@@ -73,7 +75,7 @@ const Navbar = () => {
               className='cursor-pointer'
             />
           </a>
-        </Link>
+        </Link> */}
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
             <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5] '>
