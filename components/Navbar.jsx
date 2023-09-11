@@ -76,26 +76,29 @@ const Navbar = () => {
             />
           </a>
         </Link> */}
-        <div>
+        <div className='p-2'>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
-            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5] '>
+            <li className='ml-10 text-sm hover:border-b py-2 hover:text-[#5651e5] '>
               <Link href='/' >Home</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
+            <li className='ml-10 text-sm hover:border-b py-2 hover:text-[#5651e5]'>
               <Link href='/#about'>About</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
+            <li className='ml-10 text-sm hover:border-b py-2 hover:text-[#5651e5]'>
               <Link href='/#skills'>Skills</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
+            <li className='ml-10 text-sm hover:border-b py-2 hover:text-[#5651e5]'>
               <Link href='/#projects'>Projects</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
+            <li className='ml-10 text-sm hover:border-b p-2 hover:text-[#5651e5]'>
               <Link href='/resume'>Resume</Link>
             </li>
-            <li className='ml-10 text-sm hover:border-b hover:text-[#5651e5]'>
+            
+            <li className='ml-10 text-sm text-white px-4 py-2 bg-[#5651e5]  rounded-full  hover:bg-[#5651e5]/90'>
               <Link href='/#contact'>Contact</Link>
             </li>
+
+            
           </ul>
           {/* Hamburger Icon */}
           {/* <div
