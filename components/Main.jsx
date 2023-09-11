@@ -1,10 +1,15 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {CgMouse} from 'react-icons/cg'
 import {FiArrowDown} from 'react-icons/fi'
+import Linkedin from '../public/assets/linkedin-ic.png'
+import Github from '../public/assets/github-ic.png'
+import Contact from '../public/assets/Contact-ic.png'
+import Cv from '../public/assets/Cv-ic.png'
 
 const Main = () => {
   return (
@@ -24,36 +29,32 @@ const Main = () => {
           </p>
           <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
             <a
-              href='https://www.linkedin.com/in/clint-briley-50056920a/'
+              href='https://www.linkedin.com/in/elias-haideri-600880188/'
               target='_blank'
               rel='noreferrer'
             >
-              <div className= 'p-6 cursor-pointer hover:scale-110  transition-all ease-in-out transform-origin center'>
-                <FaLinkedinIn className='w-12 h-11 text-[#5651e5]'/>
+              <div className= 'cursor-pointer w-12 h-12 bg-[#5651e5]/10  hover:bg-[#5651e5]/20 p-3 rounded-lg center'>
+                <Image src = {Linkedin} className=' text-[#5651e5]'></Image>
               </div>
             </a>
             <a
-              href='https://github.com/fireclint'
+              href='https://github.com/rollahaideri?tab=repositories'
               target='_blank'
               rel='noreferrer'
             >
-              <div className=' p-6 cursor-pointer hover:scale-110  transition-all ease-in-out transform-origin center'>
-                <FaGithub className='w-12 h-11 text-[#5651e5]'/>
+              <div className= 'cursor-pointer w-12 h-12 bg-[#5651e5]/10  hover:bg-[#5651e5]/20 p-3 rounded-lg center'>
+                <Image src = {Github} className=' text-[#5651e5]'></Image>
               </div>
             </a>
-            <Link href='/#contact'>
-              <div className='p-6 cursor-pointer hover:scale-110  transition-all ease-in-out transform-origin center'>
-                <AiOutlineMail className='w-12 h-11 text-[#5651e5]'/>
-              </div>
-            </Link>
+            
             <Link href='/resume'>
-              <div className='p-6 cursor-pointer hover:scale-110  transition-all ease-in-out transform-origin center'>
-                <BsFillPersonLinesFill className='w-12 h-11 text-[#5651e5]'/>
+            <div className= 'cursor-pointer w-12 h-12 bg-[#5651e5]/10  hover:bg-[#5651e5]/20 p-3 rounded-lg center'>
+                <Image src = {Cv} className=' text-[#5651e5]'></Image>
               </div>
             </Link>
             
           </div>
-          <Link href='/#about'>
+          <Link href='/#projects'>
               <div className=' cursor-pointer flex items-center justify-between max-w-[220px] py-6 px-5 relative left-9 bottom-14 top-14 hover:translate-y-3 transition-all duration-300 ease-in-out'>
                 <CgMouse className='w-12 h-11 text-[#5651e5]'/>
                 <a>Scroll down</a>
